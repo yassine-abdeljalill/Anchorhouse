@@ -1,0 +1,114 @@
+.section {
+  width: 100%;
+  background-color: var(--color-surface);
+  padding: var(--space-2xl) 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding-inline: var(--space-xl);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  max-width: 560px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  letter-spacing: var(--ls-label-sm);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-headline-lg-mobile);
+  font-weight: var(--fw-headline-lg);
+  line-height: var(--lh-headline-lg-mobile);
+  letter-spacing: var(--ls-headline-lg-mobile);
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: var(--fs-headline-lg);
+    line-height: var(--lh-headline-lg);
+    letter-spacing: var(--ls-headline-lg);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.step {
+  background-color: var(--color-surface-container-low);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  border-top: 2px solid var(--color-secondary-container);
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), border-top-color 300ms ease;
+  will-change: transform, box-shadow;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-top-color: var(--color-secondary);
+}
+
+.number {
+  font-family: var(--font-serif);
+  font-size: var(--fs-numeric-md);
+  font-weight: var(--fw-numeric-md);
+  line-height: var(--lh-numeric-md);
+  color: var(--color-secondary);
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-title-md);
+  font-weight: var(--fw-title-md);
+  line-height: var(--lh-title-md);
+  color: var(--color-primary);
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-md);
+  font-weight: var(--fw-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--color-on-surface-variant);
+}

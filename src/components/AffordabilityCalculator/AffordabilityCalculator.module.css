@@ -1,0 +1,358 @@
+.section {
+  width: 100%;
+  background-color: var(--color-surface-container-low);
+  padding: var(--space-2xl) 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding-inline: var(--space-xl);
+  }
+}
+
+/* Header row */
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.headerCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 560px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  letter-spacing: var(--ls-label-sm);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-headline-lg-mobile);
+  font-weight: var(--fw-headline-lg);
+  line-height: var(--lh-headline-lg-mobile);
+  letter-spacing: var(--ls-headline-lg-mobile);
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: var(--fs-headline-lg);
+    line-height: var(--lh-headline-lg);
+    letter-spacing: var(--ls-headline-lg);
+  }
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-md);
+  font-weight: var(--fw-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+/* Calculator widget */
+.calculator {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-surface-container-lowest);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-outline-variant);
+  flex-shrink: 0;
+}
+
+.calcRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.calcLabel {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-md);
+  font-weight: var(--fw-label-md);
+  line-height: var(--lh-label-md);
+  letter-spacing: var(--ls-label-md);
+  color: var(--color-primary);
+}
+
+.incomeValue {
+  font-family: var(--font-sans);
+  font-size: var(--fs-title-md);
+  font-weight: var(--fw-title-md);
+  line-height: var(--lh-title-md);
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--color-surface-container-highest);
+  cursor: pointer;
+  margin: var(--space-sm) 0;
+  accent-color: var(--color-secondary);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-secondary);
+  border: 2px solid var(--color-on-secondary-fixed-variant);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-secondary);
+  border: 2px solid var(--color-on-secondary-fixed-variant);
+  cursor: pointer;
+}
+
+.budgetRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: var(--space-xxs);
+}
+
+.budgetLabel {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.budgetValue {
+  font-family: var(--font-serif);
+  font-size: var(--fs-numeric-md);
+  font-weight: var(--fw-numeric-md);
+  line-height: var(--lh-numeric-md);
+  color: var(--color-primary);
+}
+
+/* Filter chips */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.filterLabel {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  letter-spacing: var(--ls-label-sm);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-right: var(--space-xs);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Listing card */
+.card {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(30, 54, 48, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 350ms cubic-bezier(0.16, 1, 0.3, 1), border-color 350ms ease;
+  will-change: transform, box-shadow;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px -8px rgba(8, 33, 27, 0.14), 0 4px 12px rgba(8, 33, 27, 0.06);
+  border-color: rgba(30, 54, 48, 0.28);
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 224px;
+  background-color: var(--color-surface-container);
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .img {
+  transform: scale(1.06);
+}
+
+.budgetBadge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary-fixed);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  letter-spacing: var(--ls-label-sm);
+  text-transform: uppercase;
+  padding: var(--space-xxs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-primary-fixed-dim);
+}
+
+.cardBody {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.cardMeta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.cardRent {
+  font-family: var(--font-serif);
+  font-size: var(--fs-headline-sm);
+  font-weight: var(--fw-headline-sm);
+  line-height: var(--lh-headline-sm);
+  color: var(--color-primary);
+}
+
+.cardRentUnit {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-body-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.cardNeighborhood {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.cardAddress {
+  font-family: var(--font-sans);
+  font-size: var(--fs-title-md);
+  font-weight: var(--fw-title-md);
+  line-height: var(--lh-title-md);
+  color: var(--color-primary);
+  margin-top: var(--space-xxs);
+}
+
+.cardDetails {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--color-on-surface-variant);
+  margin-top: var(--space-xxs);
+}
+
+.cardAmenities {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--color-primary);
+  margin-top: var(--space-xs);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(30, 54, 48, 0.08);
+}
+
+.cardAvailable {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.cardCta {
+  font-family: var(--font-sans);
+  font-size: var(--fs-title-sm);
+  font-weight: var(--fw-title-sm);
+  line-height: var(--lh-title-sm);
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.cardCta:hover {
+  color: var(--color-on-secondary-container);
+}

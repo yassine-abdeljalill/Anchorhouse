@@ -1,0 +1,88 @@
+import type { Listing } from '../types';
+
+export const listings: Listing[] = [
+  {
+    id: 'listing-1',
+    neighborhood: 'River North',
+    rent: 1650,
+    address: '412 Elmwood Avenue',
+    beds: '1 Bed',
+    baths: '1 Bath',
+    sqft: 680,
+    amenities: 'In-unit laundry, cat-friendly, radiator heat included',
+    available: 'Available May 1',
+    imageUrl: '/images/listing-elmwood.jpg',
+    imageAlt:
+      'Warm sunlight filling an airy living room in an architectural pre-war brick apartment with polished oak hardwood floors, high ceilings, large sash windows, curated mid-century seating, and subtle potted ferns.',
+  },
+  {
+    id: 'listing-2',
+    neighborhood: 'South Hill',
+    rent: 1850,
+    address: '820 Highland Terrace',
+    beds: '1 Bed',
+    baths: '1.5 Bath',
+    sqft: 740,
+    amenities: 'Private balcony, dishwasher, ductless mini-split AC',
+    available: 'Available Now',
+    imageUrl: '/images/listing-highland.jpg',
+    imageAlt:
+      'Refined renovated kitchen with soapstone countertops, deep forest green cabinetry, brass drawer pulls, understated ceramic subway tiles, and wide plank timber flooring.',
+  },
+  {
+    id: 'listing-3',
+    neighborhood: 'Oakridge',
+    rent: 2100,
+    address: '104 Waverly Place',
+    beds: '2 Bed',
+    baths: '1 Bath',
+    sqft: 910,
+    amenities: 'Dedicated basement storage, dog-friendly, off-street parking',
+    available: 'Available June 1',
+    imageUrl: '/images/listing-waverly.jpg',
+    imageAlt:
+      'Architectural corner bedroom in a quiet brick rowhouse with cast iron radiators, tall framed windows overlooking leafy green parkway, and neutral linen textiles.',
+  },
+  {
+    id: 'listing-4',
+    neighborhood: 'River North',
+    rent: 1450,
+    address: '219 Franklin Gate, Studio',
+    beds: 'Studio',
+    baths: '1 Bath',
+    sqft: 495,
+    amenities: 'Fiber internet wired, secured bike locker, water included',
+    available: 'Available Immediate',
+    imageUrl: '/images/listing-franklin.jpg',
+    imageAlt:
+      'Compact architecturally designed studio apartment with customized maple millwork divider, tucked queen sleeping nook, and expansive industrial black-metal sash window.',
+  },
+  {
+    id: 'listing-5',
+    neighborhood: 'Historic District',
+    rent: 2400,
+    address: '55 Merchant Square, Loft 3B',
+    beds: '2 Bed',
+    baths: '2 Bath',
+    sqft: 1120,
+    amenities: 'Exposed brick, 12ft timber ceilings, freight elevator access',
+    available: 'Available May 15',
+    imageUrl: '/images/listing-merchant.jpg',
+    imageAlt:
+      'Expansive loft with exposed historic timber beams, restored original red brick masonry, contemporary brass pendant lighting, and floor-to-ceiling bookshelves.',
+  },
+  {
+    id: 'listing-6',
+    neighborhood: 'Historic District',
+    rent: 1750,
+    address: '314 Archway Row',
+    beds: '1 Bed',
+    baths: '1 Bath',
+    sqft: 710,
+    amenities: 'Shared courtyard garden, gas cooking, secure entry intercom',
+    available: 'Available June 1',
+    imageUrl: '/images/listing-archway.jpg',
+    imageAlt:
+      'Charming colonial revival living room featuring decorative fireplace with painted cream mantle, heritage crown mouldings, polished walnut parquet floor, and garden views outside large windows.',
+  },
+];

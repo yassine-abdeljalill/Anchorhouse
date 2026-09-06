@@ -1,0 +1,208 @@
+.hero {
+  width: 100%;
+  background-color: var(--color-surface);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding-inline: var(--space-xl);
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+/* Copy column */
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  letter-spacing: var(--ls-label-sm);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: var(--fs-headline-lg-mobile);
+  font-weight: var(--fw-headline-lg);
+  line-height: var(--lh-headline-lg-mobile);
+  letter-spacing: var(--ls-headline-lg-mobile);
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .headline {
+    font-size: var(--fs-display);
+    font-weight: var(--fw-display);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+  }
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-body-lg);
+  line-height: var(--lh-body-lg);
+  color: var(--color-on-surface-variant);
+  max-width: 560px;
+}
+
+/* Search card */
+.searchCard {
+  background-color: var(--color-surface-container-lowest);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-outline-variant);
+}
+
+.searchForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .searchForm {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-md);
+  font-weight: var(--fw-label-md);
+  line-height: var(--lh-label-md);
+  letter-spacing: var(--ls-label-md);
+  color: var(--color-primary);
+}
+
+.select {
+  background-color: var(--color-surface-container-low);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-outline-variant);
+  outline: none;
+  transition: var(--transition-colors);
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+  outline: 2px solid rgba(217, 164, 65, 0.4);
+  outline-offset: 0;
+}
+
+.submitRow {
+  grid-column: 1 / -1;
+  padding-top: var(--space-xs);
+}
+
+.searchBtn {
+  width: 100%;
+  padding: var(--space-sm) var(--space-xl);
+}
+
+@media (min-width: 640px) {
+  .searchBtn {
+    width: auto;
+  }
+}
+
+/* Illustration column */
+.illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illusCard {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--color-surface-container);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(30, 54, 48, 0.15);
+  overflow: hidden;
+}
+
+.illusHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-sm);
+}
+
+.illusLabel {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  letter-spacing: var(--ls-label-sm);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+.illusTag {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  color: var(--color-secondary);
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+}
+
+.illusFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-xs);
+  margin-top: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label-sm);
+  line-height: var(--lh-label-sm);
+  color: var(--color-on-surface-variant);
+}
